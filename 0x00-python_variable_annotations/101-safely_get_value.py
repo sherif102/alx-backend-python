@@ -15,6 +15,7 @@ def safely_get_value(
         key: Any,
         default: Union[T, None] = None
         ) -> Union[Any, T]:
+    """return value from type annotated function"""
     if key in dct:
         return dct[key]
     else:
