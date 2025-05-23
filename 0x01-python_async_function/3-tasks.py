@@ -13,5 +13,4 @@ wait_random: Callable[
 
 def task_wait_random(max_delay: int):
     """return an asyncio.Task"""
-    task = asyncio.Task(wait_random(max_delay))
-    return task
+    return asyncio.Task(wait_random(max_delay))
