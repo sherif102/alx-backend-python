@@ -16,4 +16,4 @@ wait_random: Callable[
 async def wait_n(n: int, max_delay: int) -> List[float]:
     """runs multiple coroutine functions simultaneously"""
     result = [wait_random(max_delay) for _ in range(n)]
-    return await asyncio.gather(*result)
+    return sorted(await asyncio.gather(*result))
